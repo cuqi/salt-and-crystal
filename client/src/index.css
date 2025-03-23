@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap');
 @import url('https://rsms.me/inter/inter.css');
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -30,7 +30,7 @@ html {
     font-family: "Inter var", sans-serif;
   }
 }
-
+/*
 .app {
   @apply relative w-full h-screen overflow-hidden;
 }
@@ -105,4 +105,4 @@ input[type="file"] {
 
 .sketch-picker > div:nth-child(3) {
   display: none !important;
-}
+}*/
