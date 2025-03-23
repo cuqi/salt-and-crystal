@@ -1,7 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap");
-@import url("https://rsms.me/inter/inter.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap');
+@import url('https://rsms.me/inter/inter.css');
 
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 html {
   font-family: "Inter", sans-serif;
@@ -30,7 +48,7 @@ html {
 }
 
 .download-btn {
-  @apply w-14 h-14 flex justify-center items-center rounded-full glassmorphism cursor-pointer outline-none;
+  @apply w-14 h-14 flex justify-center items-center rounded-full glassmorphism cursor-pointer outline-hidden;
 }
 
 .editortabs-container {
@@ -46,7 +64,7 @@ html {
 }
 
 .aipicker-textarea {
-  @apply w-full bg-transparent text-sm border border-gray-300 p-2 outline-none flex-1;
+  @apply w-full bg-transparent text-sm border border-gray-300 p-2 outline-hidden flex-1;
 }
 
 .filepicker-container {
@@ -54,7 +72,7 @@ html {
 }
 
 .filepicker-label {
-  @apply border border-gray-300 py-1.5 px-2 rounded-md shadow-sm text-xs text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 cursor-pointer w-fit;
+  @apply border border-gray-300 py-1.5 px-2 rounded-md shadow-xs text-xs text-gray-700 focus:outline-hidden focus:ring-1 focus:ring-blue-500 focus:border-blue-500 cursor-pointer w-fit;
 }
 
 .tab-btn {
